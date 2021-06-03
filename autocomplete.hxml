@@ -1,0 +1,29 @@
+# Autocompletion .hxml for all your haxe libraries and packages.
+-lib LunaTea
+-lib hxnodejs
+
+-cp src
+
+# JS Version
+-D js-es=6
+
+# RM Version for Conditional Compilation
+
+
+-dce full
+
+--no-output
+# --macro macros.MacroTools.includeJsLib("./src/LunaSkipTitleParams.js")
+-main LunaLicenses
+--each
+
+# Place the plugins you want evaluated in this list
+
+--each
+
+--next
+-js dist/Luna_Licenses.js
+# You can include plugin parameters as a macro in your compile.hxml
+--next
+-D compileMV
+-js dist/Luna_LicensesMV.jn
